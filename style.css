@@ -1,0 +1,656 @@
+/* ======================================================
+   GOOGLE FONTS
+====================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ======================================================
+   VARIABLES
+====================================================== */
+
+:root {
+
+  --primary: #2E7D32;
+  --primary-dark: #1B5E20;
+  --primary-light: #4CAF50;
+
+  --background: #F6FAF5;
+  --white: #ffffff;
+  --text: #333333;
+  --gray: #6b7280;
+
+  --shadow: 0 12px 30px rgba(0, 0, 0, .12);
+  --radius: 18px;
+
+}
+
+/* ======================================================
+   RESET
+====================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family: 'Poppins', sans-serif;
+
+  background: linear-gradient(180deg, #f8fff6, #eef8ee);
+
+  color: var(--text);
+
+  line-height: 1.8;
+
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+header {
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(rgba(20, 85, 40, .75),
+      rgba(20, 85, 40, .75)),
+    url("img4.png") no-repeat;
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-attachment: fixed;
+
+}
+
+.overlay {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 30px 8%;
+
+}
+
+/* ======================================================
+   NAVBAR
+====================================================== */
+
+nav {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+}
+
+.logo {
+
+  color: white;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
+}
+
+.logo span {
+
+  margin-left: 8px;
+
+}
+
+nav ul {
+
+  display: flex;
+
+  list-style: none;
+
+  gap: 15px;
+
+}
+
+nav ul li a {
+
+  text-decoration: none;
+
+  color: white;
+
+  font-weight: 500;
+
+  padding: 10px 20px;
+
+  border-radius: 40px;
+
+  transition: .35s;
+
+}
+
+nav ul li a:hover {
+
+  background: white;
+
+  color: var(--primary);
+
+}
+
+/* ======================================================
+   HERO
+====================================================== */
+
+.hero {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 50px;
+
+  min-height: 80vh;
+
+}
+
+.hero-text h1 {
+
+  color: white;
+
+  font-size: 4rem;
+
+  line-height: 1.2;
+
+  margin-bottom: 25px;
+
+}
+
+.hero-text span {
+
+  color: #A5F3A3;
+
+}
+
+.hero-text p {
+
+  color: white;
+
+  font-size: 1.15rem;
+
+  margin-bottom: 35px;
+
+  max-width: 550px;
+
+}
+
+.btn {
+
+  display: inline-block;
+
+  text-decoration: none;
+
+  background: linear-gradient(135deg, #4CAF50, #1B5E20);
+
+  color: white;
+
+  padding: 15px 38px;
+
+  border-radius: 50px;
+
+  font-weight: 600;
+
+  transition: .35s;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+
+}
+
+.btn:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 18px 35px rgba(0, 0, 0, .25);
+
+}
+
+.hero-image {
+
+  display: flex;
+
+  justify-content: center;
+
+}
+
+.hero-image img {
+
+  width: 420px;
+
+  max-width: 100%;
+
+  border-radius: 25px;
+
+  border: 8px solid rgba(255, 255, 255, .35);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
+
+  transition: .5s;
+
+}
+
+.hero-image img:hover {
+
+  transform: scale(1.05) rotate(2deg);
+
+}
+
+/* ======================================================
+   CONTENEDOR GENERAL
+====================================================== */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title h2 {
+  font-size: 2.6rem;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.title h2::after {
+  content: "";
+  width: 90px;
+  height: 5px;
+  background: var(--primary);
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 20px;
+}
+
+.title p {
+  color: var(--gray);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ======================================================
+   TARJETAS
+====================================================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--white);
+  padding: 35px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: .35s;
+  border-top: 5px solid var(--primary);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .18);
+}
+
+.card h3 {
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.card p {
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+/* ======================================================
+   PRODUCTOS
+====================================================== */
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  margin-bottom: 60px;
+}
+
+.producto {
+  background: var(--white);
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: .35s;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.producto:hover {
+  transform: translateY(-10px);
+}
+
+.producto img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.producto h3 {
+  color: var(--primary-dark);
+  margin: 20px 0 10px;
+}
+
+.producto p {
+  color: var(--gray);
+  padding: 0 25px;
+}
+
+.producto span {
+  display: inline-block;
+  margin-top: 20px;
+  background: var(--primary);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* ======================================================
+   TABLA
+====================================================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  background: white;
+}
+
+th {
+  background: var(--primary-dark);
+  color: white;
+  padding: 18px;
+  font-size: 1rem;
+}
+
+td {
+  padding: 18px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tr:nth-child(even) {
+  background: #f4fbf4;
+}
+
+tr:hover {
+  background: #dff4df;
+  transition: .3s;
+}
+
+/* ======================================================
+   LISTAS
+====================================================== */
+
+ul,
+ol {
+  padding-left: 25px;
+}
+
+li {
+  margin: 12px 0;
+  color: var(--gray);
+  font-size: 1.05rem;
+}
+
+/* ======================================================
+   EFECTOS GENERALES
+====================================================== */
+
+section {
+  animation: fadeUp .8s ease;
+}
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* ======================================================
+   CONTACTO
+====================================================== */
+
+.contacto {
+  margin-top: 80px;
+}
+
+.contact-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+}
+
+.info,
+.social {
+  background: var(--white);
+  padding: 35px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: .35s;
+}
+
+.info:hover,
+.social:hover {
+  transform: translateY(-8px);
+}
+
+.info h3,
+.social h3 {
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+}
+
+.info p,
+.social p {
+  color: var(--gray);
+  margin-bottom: 12px;
+}
+
+.social {
+  text-align: center;
+}
+
+.social .btn {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #E1306C, #FD1D1D, #FCAF45);
+}
+
+.social .btn:hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+footer {
+  margin-top: 80px;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: white;
+  text-align: center;
+  padding: 60px 20px 35px;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.footer-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.footer-content p {
+  opacity: .9;
+  margin: 12px 0;
+}
+
+footer hr {
+  width: 120px;
+  margin: 25px auto;
+  border: none;
+  height: 3px;
+  background: rgba(255, 255, 255, .35);
+  border-radius: 20px;
+}
+
+/* ======================================================
+   SCROLLBAR
+====================================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf7ed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* ======================================================
+   SELECCIÓN DE TEXTO
+====================================================== */
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width:992px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+    padding-top: 40px;
+  }
+
+  .hero-text p {
+    margin: 0 auto 30px;
+  }
+
+  .hero-image img {
+    width: 340px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  table {
+    width: 100%;
+    display: table;
+  }
+
+}
+
+th,
+td {
+  padding: 12px 8px;
+  font-size: 14px;
+}
+
+@media (max-width:480px) {
+
+  .logo {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 200px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
+    width: 260px;
+  }
+
+  section,
+  .card,
+  .producto,
+  .info,
+  .social {
+    border-radius: 14px;
+  }
+
+}
